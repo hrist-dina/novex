@@ -1,0 +1,24 @@
+button,
+.button {
+    cursor: pointer;
+}
+
+.button-red {
+    display: inline-block;
+    padding: 18px 8px;
+    background: #ff4f73;
+    border: none;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 21px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+    }
+
+    &:active {
+        background: #ed395e;
+    }
+}
