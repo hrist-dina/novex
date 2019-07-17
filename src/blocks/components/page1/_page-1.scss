@@ -1,0 +1,23 @@
+.page-1 {
+
+  & .content {
+
+  }
+
+  &__left {
+    background-color: #fff;
+    z-index: 0;
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      top: 0;
+      left: 0;
+      background-color: #007AC9;
+      z-index: -1;
+    }
+  }
+}

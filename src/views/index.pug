@@ -1,9 +1,12 @@
 extends layouts/default
 block variables
-	- var title = "gulp-pug-starter"
+	- var title = "Выиграй технику для дома или 3000₽ на бонусную карту"
+
 
 block content
-	.container
-		li
-			a(href='ui-kit.html') UI-Kit
-		include ../blocks/modules/main/main
+	main.pages
+		include ../blocks/components/page-0/page-0
+		include ../blocks/components/page1/page1
+
+
+

@@ -1,21 +1,31 @@
 button,
 .button {
     cursor: pointer;
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
 }
 
-.button-red {
+.button {
     display: inline-block;
-    padding: 18px 8px;
-    background: #ff4f73;
+    padding: 18px 33px;
     border: none;
     box-sizing: border-box;
     color: #ffffff;
     font-size: 21px;
-    cursor: pointer;
+    line-height: 26px;
     text-align: center;
     text-decoration: none;
+}
+
+
+.button-red {
+    background: #ff4f73;
 
     &:hover {
+        box-shadow: 0 4px 22px rgba(255, 79, 115, 0.84);
     }
 
     &:active {

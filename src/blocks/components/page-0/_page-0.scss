@@ -1,0 +1,82 @@
+.page {
+  &__part {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+  }
+
+  &__left {
+    right: 50%;
+    left: 0;
+
+
+  }
+}
+
+
+.page-0 {
+
+  &__left {
+    z-index: 0;
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 0;
+      height: 0;
+      z-index: -1;
+      opacity: 0.8;
+    }
+
+    &:before {
+      border-bottom: 100vh solid #009FDA;
+      border-right: 50vw solid transparent;
+    }
+
+    &:after {
+      border-top: 100vh solid #007AC9;
+      border-left: 50vw solid transparent;
+    }
+
+  }
+
+  &__bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.15);
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+
+  &__text {
+    margin-top: 13.90vh
+  }
+
+  &__date {
+    font-size: 2.56vh;
+    line-height: 3.85vh;
+    color: #fff;
+    margin-bottom: 2.03vh
+  }
+
+  &__title {
+    font-size: 5.77vh;
+    line-height: 7.48vh;
+    color: #fff;
+    text-shadow: 0 6px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 7.48vh
+  }
+
+
+ }

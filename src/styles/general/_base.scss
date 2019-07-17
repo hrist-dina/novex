@@ -1,12 +1,6 @@
 body {
-	font-family: "Arial", sans-serif;
+	font-family: "Geometria", sans-serif;
 	font-size: 16px;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 
 h1, h2, h3, h4, h5, h6, ul {
@@ -15,15 +9,180 @@ h1, h2, h3, h4, h5, h6, ul {
 }
 
 .container {
-	@include container();
-	@include sm(max-width, 510px);
-	@include md(max-width, 690px);
-	@include lg(max-width, 930px);
-	@include xl(max-width, 1110px);
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
 }
 
-.img-responsive {
-	max-width: 500px;
-	width: 100%;
-	height: auto;
+.content {
+	padding: 5.35vh 2.60vw;
+	max-width: 1560px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	&__left {
+		padding-left: 9.38vw;
+	}
+
+	&__title {
+		position: relative;
+		font-size: 44px;
+		line-height: 56px;
+		color: #fff;
+		text-shadow: 0 6px 8px rgba(0, 0, 0, 0.08);
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: -73px;
+			top: 0;
+			bottom: 0;
+			right: auto;
+			margin: auto;
+			width: 48px;
+			height: 2px;
+			background-color: #fff;
+		}
+	}
 }
+
+.o-hidden {
+	overflow: hidden !important;
+}
+
+.main-wrapper {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin-right: -17px;
+	-webkit-overflow-scrolling: touch;
+}
+
+.logo {
+	display: block;
+	background-image: url("../img/screen-1/logo.svg");
+	width: 462px;
+	height: 51px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	text-indent: -6000px;
+}
+
+
+.container_winners {
+	min-height: 100%;
+	height: auto !important;
+}
+
+.container_brands-table {
+	padding: 5vh 0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.container_left {
+	right: 50%;
+	padding-left: 0;
+}
+
+.container_wide {
+	padding-left: 5vw;
+}
+
+.container_right {
+	left: 50%;
+	padding-right: 8vw;
+}
+
+.container_page-0 {
+	top: 0;
+	/* без z-index, но все ***_page-* с ним, см.:
+    .button-fairy-locked,
+    .left-bottom-soaring-image,
+    .right-bottom-soaring-image
+    это нужно чтобы .button-fairy-locked (вместе с before и after)
+    был выше по z, чем ****-bottom-soaring-image на первых двух слайдах */
+}
+
+.container_page-1.page__left {
+	top: 0;
+	left: -100%;
+	z-index: 200;
+}
+
+.container_page-2.page__left {
+	top: 200%;
+	z-index: 300;
+}
+
+.container_page-3.page__left {
+	top: 300%;
+	z-index: 400;
+}
+
+.container_page-4.page__left {
+	top: 400%;
+	z-index: 500;
+}
+
+.container_page-5.page__left {
+	top: 500%;
+	z-index: 600;
+}
+
+.container_page-1.page__right {
+	top: 0;
+	left: 100%;
+	z-index: 200;
+}
+
+.container_page-5.page__full {
+	z-index: 600;
+}
+
+.container_page-2.page__right {
+	top: -200%;
+	z-index: 300;
+}
+
+.container_page-3.page__right {
+	top: -300%;
+	z-index: 400;
+}
+
+.container_page-4.page__right {
+	top: -400%;
+	z-index: 500;
+}
+
+.container_page-5.page__right {
+	top: -500%;
+	z-index: 600;
+}
+
+.container_less {
+	left: 40%;
+	display: none;
+}
+
+.desktop .page.is-show .page__part {
+	top: 0;
+}
+
+.desktop .page.is-hide .page__part {
+	top: 0;
+}
+
+.desktop .page.is-show .container_page-1.page__left {
+	left: 0;
+}
+
+.desktop .page.is-show .container_page-1.page__right {
+	left: 50%;
+}
+
