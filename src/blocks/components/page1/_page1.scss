@@ -1,0 +1,215 @@
+.page-1 {
+
+  &__right {
+    background: #009FDA;
+  }
+
+  & .content__top {
+    padding-top: 13vh;
+  }
+
+  &__pattern {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: auto;
+    z-index: -1;
+  }
+
+  &__left {
+    background-color: #fff;
+    z-index: 0;
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      top: 0;
+      left: 0;
+      background-color: #007AC9;
+      z-index: -1;
+    }
+  }
+
+  &__technic {
+    position: relative;
+    width: #{calc(100% / 4)};
+
+    
+    &-list {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &-stiker {
+      position: absolute;
+      width: 158px;
+      height: 159px;
+
+      z-index: 0;
+
+      &-text {
+        height: 100%;
+        background: #FAE950;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07);
+        border-radius: 50%;
+        background: linear-gradient(317.92deg, #FBD346 17.53%, #FFEF64 73.38%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 6px;
+        box-sizing: border-box;
+        position: relative;
+        font-size: 16px;
+        line-height: 20px;
+        color: #333333;
+        z-index: 1;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        right: 83%;
+        top: 10px;
+        width: 0;
+        height: 0;
+        border-top: 13px solid transparent;
+        border-right: 32px solid #ffef63;
+        border-bottom: 13px solid transparent;
+        transform: rotate3d(1, 1, 1, 45deg);
+        z-index: 0;
+      }
+    }
+
+    &.fridge {
+      background: url("../img/page1/fridge.png") no-repeat;
+      width: 182px;
+      height: 483px;
+    }
+
+    &.fridge &-stiker {
+      bottom: -120px;
+      left: 30px;
+    }
+
+    &.washer {
+      background: url("../img/page1/washer.png") no-repeat;
+      width: 242px;
+      height: 280px;
+    }
+
+    &.washer &-stiker {
+      top: -135px;
+      left: 30px;
+
+      &-text {
+        box-shadow: none;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        right: auto;
+        top: auto;
+        left: 80%;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-right: 0;
+        border-left: 40px solid #fcd64a;
+        border-bottom: 20px solid transparent;
+        transform: rotate3d(1, 1, 1, 50deg);
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07);
+        z-index: 0;
+      }
+    }
+
+    &.dishwasher {
+      background: url("../img/page1/dishwasher.png") no-repeat center;
+      width: 256px;
+      height: 309px;
+    }
+
+    &.dishwasher &-stiker {
+      bottom: -110px;
+      left: 50px;
+    }
+
+    &.hoover {
+      background: url("../img/page1/hoover.png") no-repeat center;
+      width: 151px;
+      height: 131px;
+    }
+
+    &.hoover &-stiker {
+      top: -155px;
+      left: -10px;
+
+      &-text {
+        box-shadow: none;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        right: auto;
+        top: auto;
+        left: 75%;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-right: 0;
+        border-left: 30px solid #fcd64a;
+        border-bottom: 15px solid transparent;
+        transform: rotate3d(1, 1, 1, 50deg);
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07);
+        z-index: 0;
+      }
+    }
+  }
+
+
+  &__card {
+    margin-top: 4.47vh;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: -5.64vw;
+    right: 0;
+    background: url('../img/page1/cards.png') no-repeat center;
+    background-size: contain;
+    max-width: 550px;
+    max-height: 550px;
+    width: 28.64vw;
+    height: 55.9vh;
+  }
+
+  &__stiker {
+    position: absolute;
+    width: #{calc( 6.74vw + 13.16vh)};
+    height: #{calc( 6.74vw + 13.16vh)};
+    right: -8vw;
+    top: 9vh;
+    background: #DD4444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+
+    &-text {
+      color: #fff;
+      font-size: 4.47vh; //44px;
+      line-height: 55px;
+    }
+  }
+
+  & .button {
+    position: absolute;
+  }
+}

@@ -62,23 +62,6 @@ input::-ms-clear {
 
 /*base styles begins*/
 
-a:link,
-a:visited,
-a:hover,
-a:active,
-a:focus {
-  color: #507aad;
-  text-decoration: none;
-  -moz-transition: color 0.3s ease, background 0.3s ease, border 0.3s ease;
-  -webkit-transition: color 0.3s ease, background 0.3s ease, border 0.3s ease;
-  transition: color 0.3s ease, background 0.3s ease, border 0.3s ease;
-}
-
-a:hover {
-  color: #ed731c;
-  border-bottom-color: transparent;
-}
-
 .bold {
   font-weight: bold !important;
 }
@@ -230,31 +213,6 @@ a:hover {
 
 .dotted {
   border-bottom-style: dotted !important;
-}
-
-.button,
-.button:link,
-.button:visited,
-.button:hover,
-.button:active,
-.button:focus {
-  font: 400 1.2rem Arial, Helvetica, sans-serif;
-  line-height: 3.1; /* Для IE */
-  display: inline-block;
-  padding: 3px 50px 0;
-  color:#fff;
-  white-space: nowrap;
-  outline: none;
-  border: 2px solid transparent;
-}
-
-a.button,
-a.button:link,
-a.button:visited,
-a.button:hover,
-a.button:active,
-a.button:focus {
-  cursor: pointer;
 }
 
 .button_green,
@@ -565,6 +523,17 @@ hr.hr {
   -o-transform: translateY(-50%); /* Для Opera */
   transform: translateY(-50%);
 }
+
+.block-horizontal-center {
+  position: relative;
+  left: 50%;
+  -moz-transform: translateX(-50%); /* Для Firefox */
+  -ms-transform: translateX(-50%); /* Для IE */
+  -webkit-transform: translateX(-50%); /* Для Safari, Chrome, iOS */
+  -o-transform: translateX(-50%); /* Для Opera */
+  transform: translateX(-50%);
+}
+
 
 .block-vertical-center_t39p {
   top: 39% !important;
