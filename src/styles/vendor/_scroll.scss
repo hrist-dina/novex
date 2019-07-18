@@ -5,19 +5,19 @@ html, body, h1, h2, h3, h4, h5, h6, a, img, form, label, table, tbody, tfoot, th
 }
 
 html {
-  font: 16px/26px Arial, Helvetica, sans-serif;
-  color: #202020;
+  //font: 16px/26px Arial, Helvetica, sans-serif;
+  //color: #202020;
 }
 
 html.tablet {
-  font: 20px/26px Arial, Helvetica, sans-serif;
-  color: #202020;
+  //font: 20px/26px Arial, Helvetica, sans-serif;
+  //color: #202020;
 }
 
 @media (orientation: landscape) {
   html.tablet {
-    font: 16px/26px Arial, Helvetica, sans-serif;
-    color: #202020;
+    //font: 16px/26px Arial, Helvetica, sans-serif;
+    //color: #202020;
   }
 }
 
@@ -91,30 +91,6 @@ a:hover {
   background-repeat: no-repeat;
   display: inline-block !important;
   position: relative;
-}
-
-h1, .title {
-  font: 700 4.5rem/1.15 Arial, Helvetica, sans-serif;
-  color: #fff;
-  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-h2, .title-sm {
-  font: 700 2.5rem/1.5 Arial, Helvetica, sans-serif;
-  color: #fff;
-  letter-spacing: 2px;
-}
-
-.tablet .title-sm {
-  font: 700 4rem/1.5 'CirceBold', Arial, Helvetica, sans-serif;
-}
-
-h3, .title-vsm {
-
-}
-
-h4 {
-
 }
 
 .content ul {
@@ -2017,36 +1993,6 @@ a.paginator__link_h-hidden:focus {
 .menu-panel_dark .menu-panel__icon{
   background-image: url(../img/icon-menu-btn-dark.png);
 }
-
-a.logo:link,
-a.logo:visited,
-a.logo:hover,
-a.logo:active,
-a.logo:focus {
-  background-image: url(../img/icon-logo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  width: 10%;
-  height: 11vh;
-  margin: 8vh auto 2vh;
-  text-indent: -6000px;
-  display: block;
-  border-bottom:0;
-  position: absolute;
-  left: 50%;
-  top: -12px;
-  -moz-transform: translate(-50%, 0); /* Для Firefox */
-  -ms-transform: translate(-50%, 0); /* Для IE */
-  -webkit-transform: translate(-50%, 0); /* Для Safari, Chrome, iOS */
-  -o-transform: translate(-50%, 0); /* Для Opera */
-  transform: translate(-50%, 0);
-}
-
-a.logo:hover {
-
-}
-
 
 .header-pic {
   background-position-y: -12px;
