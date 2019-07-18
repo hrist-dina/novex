@@ -1,0 +1,122 @@
+.page-2 {
+
+  &__right {
+    background: #009FDA;
+  }
+
+  & .content__top {
+    padding-top: 13vh;
+  }
+
+  &__pattern {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: auto;
+    z-index: -1;
+  }
+
+  &__left {
+    background-color: #CAE3ED;
+    z-index: 0;
+  }
+
+  &__date {
+    font-size: 2.44vh  /* 24/9.85 */;
+    line-height: 3.65vh  /* 36/9.85 */;
+    color: #007AC9;
+    margin-top: 2.03vh  /* 20/9.85 */;
+    margin-bottom: 1.32vh  /* 13/9.85 */;
+  }
+
+  &__title {
+    font-size: 4.47vh  /* 44/9.85 */;
+    line-height: 5.69vh  /* 56/9.85 */;
+    color: #007AC9;
+    margin-bottom: 5.03vh  /* 20/9.85 */
+  }
+
+  &__pattern-circle {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+  }
+  
+  &__white-bg {
+    background-color: #fff;
+  }
+
+  &__parner {
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-around;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+
+  &__block-title {
+    position: relative;
+    padding-top: 4.06vh  /* 40/9.85 */;
+    padding-left: 2.604vw  /* 50/19.2 */;
+    padding-right: 6.25vw  /* 120/19.2 */;
+    max-width: 690px;
+    width: 100%;
+    background: #007AC9;
+    font-size: 28px;
+    line-height: 35px;
+    color: #fff;
+    box-sizing: border-box;
+    z-index: 0;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -60px;
+      width: 0;
+      height: 0;
+      border-top: 60px solid #007AC9;
+      border-right: 690px solid transparent;
+      max-width: 690px;
+      z-index: -1;
+    }
+
+    & a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      line-height: 5px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+
+  }
+
+
+  &__product {
+    width: 50%;
+    text-decoration: none;
+    color: transparent;
+
+    &-wrap {
+      margin-top: -3.05vh;  /* -30/9.85 */
+      padding-left: 7.292vw  /* 140/19.2 */;
+      padding-right: 8.333vw  /* 160/19.2 */;
+    }
+
+    &-list {
+      position: relative;
+      background-color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      z-index: 1;
+    }
+  }
+}

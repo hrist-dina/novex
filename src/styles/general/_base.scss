@@ -44,6 +44,9 @@ h1, h2, h3, h4, h5, h6, ul {
 			background-color: #fff;
 		}
 	}
+	&__vertical-half {
+		height: 50%;
+	}
 }
 
 .o-hidden {
@@ -108,66 +111,46 @@ h1, h2, h3, h4, h5, h6, ul {
     это нужно чтобы .button-fairy-locked (вместе с before и after)
     был выше по z, чем ****-bottom-soaring-image на первых двух слайдах */
 }
-
-.container_page-1.page__left {
+.container.page__left {
 	top: 0;
 	left: -100%;
-	z-index: 200;
 }
 
-.container_page-2.page__left {
-	top: 200%;
-	z-index: 300;
-}
-
-.container_page-3.page__left {
-	top: 300%;
-	z-index: 400;
-}
-
-.container_page-4.page__left {
-	top: 400%;
-	z-index: 500;
-}
-
-.container_page-5.page__left {
-	top: 500%;
-	z-index: 600;
-}
-
-.container_page-1.page__right {
+.container.page__right {
 	top: 0;
 	left: 100%;
+}
+
+
+.container_page-1 {
 	z-index: 200;
 }
 
-.container_page-5.page__full {
-	z-index: 600;
-}
-
-.container_page-2.page__right {
-	top: -200%;
+.container_page-2 {
 	z-index: 300;
 }
 
-.container_page-3.page__right {
-	top: -300%;
+.container_page-3 {
 	z-index: 400;
 }
 
-.container_page-4.page__right {
-	top: -400%;
+.container_page-4 {
 	z-index: 500;
 }
 
-.container_page-5.page__right {
-	top: -500%;
+.container_page-5 {
 	z-index: 600;
 }
 
 .container_less {
 	left: 40%;
 	display: none;
+}
+
+.desktop .page__part {
+	-moz-transition: ease-in-out all .8s;
+	-webkit-transition: ease-in-out all .8s;
+	transition: ease-in-out all .8s;
 }
 
 .desktop .page.is-show .page__part {
@@ -178,11 +161,12 @@ h1, h2, h3, h4, h5, h6, ul {
 	top: 0;
 }
 
-.desktop .page.is-show .container_page-1.page__left {
+.desktop .page.is-hide .page__left,
+.desktop .page.is-show .page__left {
 	left: 0;
 }
-
-.desktop .page.is-show .container_page-1.page__right {
+.desktop .page.is-hide .page__right,
+.desktop .page.is-show .page__right {
 	left: 50%;
 }
 

@@ -28,8 +28,6 @@ export class ScrollToPage {
                 nextPage = activePage.next(),
                 prevPage = activePage.prev();
 
-            console.log(nextPage);
-            console.log(activePage);
             if (deltaY > 0) {
                 if (nextPage.length) {
                     self.scroll(nextPage.index());
@@ -77,9 +75,7 @@ export class ScrollToPage {
     //METHODS
 
     scroll(pageEq) {
-        console.log('test');
         const self = this;
-        console.log(self.inScroll);
         if (!self.inScroll) {
             self.inScroll = true;
 

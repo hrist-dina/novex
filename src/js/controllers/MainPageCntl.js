@@ -3,6 +3,7 @@ import {Menu} from "../classes/Menu";
 import {ScrollToPage} from "../classes/ScrollToPage";
 import {Paginator} from "../classes/Paginator";
 import {DeviceClassesSetter} from "../classes/DeviceClassesSetter";
+import {TicketForm} from "../classes/TicketForm";
 
 
 export class MainPageCntl {
@@ -15,6 +16,7 @@ export class MainPageCntl {
         this.initMenu();
         this.initScrollToPage();
         this.initPaginator();
+        this.initTicketForm();
     }
 
     initDeviceClassesSetter() {
@@ -43,6 +45,13 @@ export class MainPageCntl {
             scrollOwner: $('.js-page-scroll-owner')
         });
         this.paginator.init();
+    }
+
+    initTicketForm() {
+        this.ticketForm = new TicketForm({
+            form: $('.js-ticket-form')
+        });
+        this.ticketForm.init();
     }
 }
 
