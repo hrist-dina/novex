@@ -17,12 +17,19 @@ export class MainPageCntl {
         this.initScrollToPage();
         this.initPaginator();
         this.initTicketForm();
+        this.initNavigationWinners();
+
+        this.events();
+    }
+
+    events() {
+        this.bindScrollLinks();
     }
 
     initDeviceClassesSetter() {
         this.deviceClassesSetter = new DeviceClassesSetter();
         this.deviceClassesSetter.init();
-    };
+    }
 
     initMenu() {
         this.menu = new Menu({
@@ -53,6 +60,49 @@ export class MainPageCntl {
         });
         this.ticketForm.init();
     }
+
+    bindScrollLinks() {
+        var self = this;
+        $('.js-scroll-link').on('click', function( event ) {
+            event.preventDefault();
+            console.log($(this));
+            self.scrollToHref( $(this) );
+        });
+    }
+
+    scrollToHref(link) {
+        let scrollToElem = $(link.attr('href'));
+        console.log(scrollToElem);
+        this.paginator.scrollTo(scrollToElem);
+        this.menu.closeMenu();
+    }
+
+    initSwiper() {
+        this.swiper = new Swiper('.js-swiper-container', {
+            direction: 'horizontal',
+            navigation: {
+                nextEl: '.js-winners__nav-right',
+                prevEl: '.js-winners__nav-left'
+            },
+            pagination: {
+                el: '.js-swiper-pagination',
+                type: 'bullets'
+            },
+            slidesPerView: 1,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            }
+        });
+    }
+
+    initNavigationWinners() {
+        let winners = $('.js-winners__list').find('.winners__item').length;
+        if (winners >= 3) {
+            $('.js-winners__navigation').show();
+        }
+    }
+
 }
 
 
@@ -87,13 +137,6 @@ export class MainPageCntl {
 //     this.bindHideCheck();
 // };
 //
-// MainPageCntl.prototype.bindScrollLinks = function() {
-//     var self = this;
-//     $('.js-scroll-link').on('click', function( event ) {
-//         event.preventDefault();
-//         self.scrollToHref( $(this) );
-//     });
-// };
 //
 // MainPageCntl.prototype.bindShowCheck = function() {
 //     $('.js-show-check').on('click', function( event ) {

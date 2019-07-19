@@ -1,0 +1,18 @@
+<svg width="960" height="480" viewBox="0 0 960 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="240" height="240" fill="#14A7DD"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M240 0L120 120L0 0H240ZM120 120L0 240H240L120 120Z" fill="#009FDA"/>
+<rect x="240" width="240" height="240" fill="#009FDA"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M480 0L360 120L240 0H480ZM360 120L240 240H480L360 120Z" fill="#14A7DD"/>
+<rect x="480" width="240" height="240" fill="#14A7DD"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M720 0L600 120L480 0H720ZM600 120L480 240H720L600 120Z" fill="#009FDA"/>
+<rect x="720" width="240" height="240" fill="#009FDA"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M960 0L840 120L720 0H960ZM840 120L720 240H960L840 120Z" fill="#14A7DD"/>
+<rect y="240" width="240" height="240" fill="#009FDA"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M240 240L120 360L0 240H240ZM120 360L0 480H240L120 360Z" fill="#14A7DD"/>
+<rect x="240" y="240" width="240" height="240" fill="#14A7DD"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M480 240L360 360L240 240H480ZM360 360L240 480H480L360 360Z" fill="#009FDA"/>
+<rect x="480" y="240" width="240" height="240" fill="#009FDA"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M720 240L600 360L480 240H720ZM600 360L480 480H720L600 360Z" fill="#14A7DD"/>
+<rect x="720" y="240" width="240" height="240" fill="#14A7DD"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M960 240L840 360L720 240H960ZM840 360L720 480H960L840 360Z" fill="#009FDA"/>
+</svg>

@@ -8,6 +8,7 @@ export class Menu {
     }
 
     init() {
+        console.log( this.determineActiveLink.bind( this )());
         this.setActiveLink( this.determineActiveLink.bind( this )() );
         this.events();
     }
@@ -33,7 +34,7 @@ export class Menu {
     }
 
     bindActiveLinkDeterminer() {
-        var self = this;
+        let self = this;
         self.scrollOwner.on('scroll', function() {
             self.setActiveLink( self.determineActiveLink.bind( self )() );
         });

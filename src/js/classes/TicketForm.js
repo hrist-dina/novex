@@ -3,6 +3,16 @@ import $ from "jquery";
 export class TicketForm {
     constructor(options) {
         this.form = options.form;
+
+        this.requireFiled = 'validator-require';
+        this.typeFiled = 'validator-type';
+
+        this.massages = {
+            required: 'Поле обязательное для заполнения!',
+            email: 'Некорректный Email адрес!',
+            phone: 'Некорректный телефон!'
+        };
+
     }
 
     init() {
@@ -22,7 +32,9 @@ export class TicketForm {
         let self = this;
         this.form.on('submit', function(event){
             event.preventDefault();
-            self.submitEvent();
+            if (self.validate()) {
+                self.submitEvent();
+            }
         });
     }
 
@@ -55,14 +67,65 @@ export class TicketForm {
         });
     }
 
+    get fields() {
+        return this.form.find('.ticket-form__elem').find('input');
+    }
+
+    validate() {
+        let errors = {};
+        this.fields.map((key, item) => {
+            let value = $(item).val();
+            let id  = $(item).attr('id');
+
+            if ($(item).data(this.requireFiled) === true && this.constructor.checkEmpty(value)) {
+                errors[id] = this.massages.required;
+            }
+
+            if (!this.constructor.checkEmpty(value)) {
+                switch ($(item).data(this.typeFiled)) {
+                    case 'email':
+                    if (this.constructor.checkEmail(value)) {
+                            errors[id] = this.massages.email;
+                        }
+                        break;
+                    case 'phone':
+                        if (this.constructor.checkPhone(value)) {
+                            errors[id] = this.massages.phone;
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+        });
+
+        this.clearErrors();
+        this.setErrors(errors);
+
+        return $.isEmptyObject(errors);
+    }
+
+    static checkEmpty(string) {
+        return string === '';
+    }
+
+    static checkEmail(string) {
+        return !!string.search(/^[-._a-z0-9]+@+[a-z0-9-]+\.[a-z]{2,6}$/i);
+    }
+
+    static checkPhone(string) {
+        return !!string.search(/^\+7\(([0-9]{3})\)([0-9]{3})-([0-9]{2})-([0-9]{2})$/i);
+    }
+
     bindTextInputFocus() {
-        this.form.find('.ticket-form__elem').find('input').on('focus', function() {
+        this.fields.on('focus', function() {
             $(this).closest('.ticket-form__elem').addClass('active');
         });
     }
 
     bindTextInputBlur() {
-        this.form.find('.ticket-form__elem').find('input').on('blur', function() {
+        this.fields.on('blur', function() {
             let inputElem = $(this);
             let inputElemParent = inputElem.closest('.ticket-form__elem');
             let getVal = inputElem.val();
@@ -114,9 +177,8 @@ export class TicketForm {
     }
 
     setErrors( errors, form) {
-        var self = this;
-        form = form || self.form;
-        for ( var key in errors ) {
+        form = form || this.form;
+        for ( let key in errors ) {
             form.find('#' + key).closest('.ticket-form__elem').addClass('error');
             form.find('#' + key).after('<p class="ticket-form__error-text">' + errors[key] + '</p>');
         }

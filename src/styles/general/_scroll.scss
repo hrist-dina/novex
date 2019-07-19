@@ -431,89 +431,6 @@ hr.hr {
   box-sizing: border-box;
 }
 
-.container_left {
-  right: 50%;
-  padding-left: 8vw;
-}
-
-.container_wide {
-  padding-left: 5vw;
-}
-
-.container_right {
-  left: 50%;
-  padding-right: 8vw;
-}
-
-.container_page-0 {
-  top: 0;
-  /* без z-index, но все ***_page-* с ним, см.:
-  .button-fairy-locked,
-  .left-bottom-soaring-image,
-  .right-bottom-soaring-image
-  это нужно чтобы .button-fairy-locked (вместе с before и after)
-  был выше по z, чем ****-bottom-soaring-image на первых двух слайдах */
-}
-
-.container_page-1.page__left {
-  top: 100%;
-  z-index: 200;
-}
-
-.container_page-2.page__left {
-  top: 200%;
-  z-index: 300;
-}
-
-.container_page-3.page__left {
-  top: 300%;
-  z-index: 400;
-}
-
-.container_page-4.page__left {
-  top: 400%;
-  z-index: 500;
-}
-
-.container_page-5.page__left {
-  top: 500%;
-  z-index: 600;
-}
-
-.container_page-1.page__center {
-  top: -100%;
-  z-index: 200;
-}
-
-.container_page-5.page__full {
-  z-index: 600;
-}
-
-.container_page-2.page__right {
-  top: -200%;
-  z-index: 300;
-}
-
-.container_page-3.page__right {
-  top: -300%;
-  z-index: 400;
-}
-
-.container_page-4.page__right {
-  top: -400%;
-  z-index: 500;
-}
-
-.container_page-5.page__right {
-  top: -500%;
-  z-index: 600;
-}
-
-.container_less {
-  left: 40%;
-  display: none;
-}
-
 .block-vertical-center {
   position: relative;
   top: 50%;
@@ -1140,7 +1057,7 @@ hr.hr {
 }
 
 .ticket-form__elem {
-  margin-bottom: 4vh;
+  margin-bottom: 2.44vh  /* 24/9.85 */;
 }
 
 .tablet .ticket-form__elem {
@@ -1149,12 +1066,13 @@ hr.hr {
 
 .ticket-form__elem label {
   position: relative;
+  display: block;
 }
 
 .ticket-form__elem-title {
   white-space: nowrap;
   position: absolute;
-  top: -13px;
+  top: 14px;
   left: 0;
   color: #5a6555;
   font: 400 1rem/2rem 'Geometria', Arial, Helvetica, sans-serif;
@@ -1166,7 +1084,7 @@ hr.hr {
 
 .tablet .ticket-form__elem-title {
   font: 400 1.5rem/2.5rem 'Geometria', Arial, Helvetica, sans-serif;
-  top: -20px;
+  top: 20px;
 }
 
 .ticket-form__elem input {
@@ -1175,7 +1093,7 @@ hr.hr {
   background-color: #fff;
   font: 500 1rem/3.3rem 'Geometria', Arial, Helvetica, sans-serif;
   box-sizing: border-box;
-  height: 54px;
+  height: 60px;
   padding: 15px 25px 0;
   width: 100%;
   color: #15240d;
@@ -1223,8 +1141,8 @@ hr.hr {
 }
 
 .ticket-form__elem.error input {
-  color: #d54747;
-  border-color: #d54747;
+  color: #ED395E;
+  border-color: #ED395E;
 }
 
 .ticket-form__elem.active input {
@@ -1232,26 +1150,26 @@ hr.hr {
 }
 
 .active .ticket-form__elem-title {
-  top: -26px;
+  top: 4px;
   font-size: 0.87rem;
   color: #5a6555;
 }
 
 .tablet .active .ticket-form__elem-title {
-  top: -50px;
+  top: -20px;
   font-size: 1.2rem;
 }
 
 .error .ticket-form__elem-title {
-  top: -26px;
+  top: 4px;
   font-size: 0.87rem;
-  color: #d54747;
+  color: #ED395E;
 }
 
 .tablet .error .ticket-form__elem-title {
-  top: -55px;
+  top: -25px;
   font-size: 1.2rem;
-  color: #d54747;
+  color: #ED395E;
 }
 
 .ticket-form__elem.success input {
@@ -1259,31 +1177,35 @@ hr.hr {
 }
 
 .success .ticket-form__elem-title{
-  top: -26px;
+  top: 4px;
   font-size: 0.87rem;
   color: #5a6555;
 }
 
 .error.success .ticket-form__elem-title {
-  color: #d54747;
+  color: #ED395E;
 }
 
 .tablet .success .ticket-form__elem-title{
-  top: -55px;
+  top: -25px;
   font-size: 1.2rem;
   color: rgba(72, 11, 46, .6);
 }
 
 .ticket-form__error-text {
-  color: #d54747;
+  position: absolute;
+  bottom: -1.2em;
+  width: 100%;
+  color: #ED395E;
   font-size: 0.8em;
-  margin-top: -2px;
+  margin-top: 1px;
+  margin-bottom: 0;
 }
 
 .tablet .ticket-form__error-text {
   height: 0;
   position: relative;
-  top: -20px;
+  top: 4px;
 }
 
 .Edge .ticket-form__error-text {
@@ -2150,8 +2072,8 @@ a.paginator__link_h-hidden:focus {
 }
 
 .ticket-form-success {
-  background: #007AC8 url(../img/bg-round.png) 0 0 repeat;
-  background-size: 25%;
+  background: #007AC8 url("../img/page2/circle-pattern.svg") 0 0 repeat;
+  background-size: contain;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -2174,8 +2096,7 @@ a.paginator__link_h-hidden:focus {
 }
 
 .ticket-form-success__icon {
-  background: url(../img/icon-form-access.png);
-  background-repeat: no-repeat;
+  background: url(../img/icon-form-access.png) no-repeat;
   width: 92px;
   height: 88px;
   display: inline-block;
@@ -2186,14 +2107,10 @@ a.paginator__link_h-hidden:focus {
   margin-top: 3vh;
 }
 
-.ticket-form-success__button .button {
-  width: 100%;
-  padding: 0;
-}
 
 .ticket-form-success__text {
   margin-top: 2vh;
-  color: red;
+  color: #FF2B68;
   font: 700 2rem/1.38em 'Geometria', Arial, Helvetica, sans-serif;
 }
 
@@ -2576,15 +2493,6 @@ a.paginator__link_h-hidden:focus {
   margin-bottom: 11vh;
 }
 
-.triangle-bg {
-  background: #2EC6F1 url(../img/bg-triangle-mask.png);
-  background-size: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  bottom: 0;
-}
 
 .swiper-container_margin {
   margin: 0 6vw !important;

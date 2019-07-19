@@ -1,0 +1,6 @@
+<svg width="960" height="960" viewBox="0 0 960 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M0 0L120 240L240 0L360 240L480 0L600 240L720 0L840 240L960 0H720H480H240H0Z" fill="white"/>
+<path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M0 240L120 480L240 240L360 480L480 240L600 480L720 240L840 480L960 240H720H480H240H0Z" fill="white"/>
+<path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M0 480L120 720L240 480L360 720L480 480L600 720L720 480L840 720L960 480H720H480H240H0Z" fill="white"/>
+<path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M0 720L120 960L240 720L360 960L480 720L600 960L720 720L840 960L960 720H720H480H240H0Z" fill="white"/>
+</svg>

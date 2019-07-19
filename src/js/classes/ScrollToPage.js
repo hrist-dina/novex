@@ -75,6 +75,7 @@ export class ScrollToPage {
     //METHODS
 
     scroll(pageEq) {
+        console.log(pageEq);
         const self = this;
         if (!self.inScroll) {
             self.inScroll = true;

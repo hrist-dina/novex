@@ -1,6 +1,6 @@
-.page.page-3.js-page
+section.page.page-3.js-page
     #check.container.js-layout-set-height.container_left.container_page-3.page__part.page__left.visual-effects-slide.visual-effects-slide_page-second-step-left.container_narrow_4(data-v-pos='5', data-h-pos='3')
-        .triangle-bg
+        .bg-square
         .content.content__left
             .step-second
                 .step-second__header
@@ -10,32 +10,40 @@
                     img(src='img/page3/check.png', alt='')
 
     #register.container.js-layout-set-height.container_right.container_page-3.page__part.page__right.lvisual-effects-slide.visual-effects-slide_form-page.container_narrow_5(data-v-pos='6', data-h-pos='3')
+        .bg-absolute
+            <svg width="960" height="960" viewBox="0 0 960 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M0 0L120 240L240 0L360 240L480 0L600 240L720 0L840 240L960 0H720H480H240H0Z" fill="white"/>
+            <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M0 240L120 480L240 240L360 480L480 240L600 480L720 240L840 480L960 240H720H480H240H0Z" fill="white"/>
+            <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M0 480L120 720L240 480L360 720L480 480L600 720L720 480L840 720L960 480H720H480H240H0Z" fill="white"/>
+            <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M0 720L120 960L240 720L360 960L480 720L600 960L720 720L840 960L960 720H720H480H240H0Z" fill="white"/>
+            </svg>
+
         .content.block-vertical-center.slide-content-right
             form.ticket-form.js-ticket-form(method='POST', action='', accept-charset='UTF-8')
                 .ticket-form__elem
                     label(for='name')
                         span.ticket-form__elem-title Фамилия Имя Отчество
-                        input#name.js-anti-scroll(type='text', name='name', autocomplete='off')
+                        input#name.js-anti-scroll(type='text', name='name', autocomplete='off' data-validator-require="true")
                 .ticket-form__elem
                     label(for='city')
                         span.ticket-form__elem-title Город
-                        input#city.js-anti-scroll(type='text', name='city', autocomplete='off')
+                        input#city.js-anti-scroll(type='text', name='city', autocomplete='off' data-validator-require="true")
                 .ticket-form__elem
                     label(for='phone')
                         span.ticket-form__elem-title Телефон
-                        input#phone.js-anti-scroll(maxlength='18', type='text', name='phone', autocomplete='off')
+                        input#phone.js-anti-scroll(maxlength='18', type='text', name='phone', autocomplete='off' data-validator-require="true")
                 .ticket-form__elem
                     label(for='code')
                         span.ticket-form__elem-title Уникальный код с чека
-                        input#code.js-anti-scroll(type='text', name='code', autocomplete='off')
+                        input#code.js-anti-scroll(type='text', name='code', autocomplete='off' data-validator-require="true")
                 .ticket-form__elem
                     label(for='card')
                         span.ticket-form__elem-title Номер бонусной карты
-                        input#card.js-anti-scroll(type='text', name='card', autocomplete='off')
+                        input#card.js-anti-scroll(type='text', name='card', autocomplete='off' data-validator-require="true")
                 .ticket-form__elem
                     label(for='email')
                         span.ticket-form__elem-title Электронная почта
-                        input#email.js-anti-scroll(type='text', name='email', autocomplete='off')
+                        input#email.js-anti-scroll(type='text', name='email', autocomplete='off' data-validator-require="true" data-validator-type="email")
                 .ticket-form__verification
                     .ticket-form__verification-check
                         label
@@ -49,13 +57,12 @@
                     | Отправить
         .ticket-form-success.js-ticket-form-success(style='display: none;')
             .ticket-form-success__container
-                .ticket-form-success__icon
                 h2.title-sm
                     | Код успешно
                     br
-                    |                             зарегистрирован
+                    | зарегистрирован
                 .ticket-form-success__button
-                    a.button.button_blue.js-close-form-success-message(href='#')
+                    a.button.button-blue.js-close-form-success-message(href='#')
                         | Зарегистрировать еще
                 .ticket-form-success__text
                     | Сохраняйте чек до конца акции!
@@ -65,11 +72,11 @@
                 h2.title-sm.ticket-form-success__title
                     | Акция
                     br
-                    |                             еще не началась!
+                    | еще не началась!
         .ticket-form-success.js-ticket-form-success-after-action(style='display: none;')
             .ticket-form-success__container
                 .ticket-form-success__icon
                 h2.title-sm.ticket-form-success__title
                     | Акция
                     br
-                    |                             уже закончилась!
+                    | уже закончилась!

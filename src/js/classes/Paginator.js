@@ -14,9 +14,10 @@ export class Paginator {
     }
 
     scrollTo(targetElem) {
-        const self = this;
+        console.log(targetElem);
+
         $('body').hasClass('ios')
             ? $('body').animate({scrollTop: targetElem.offset().top})
-            : self.scrollOwner.animate({scrollTop: self.scrollOwner.scrollTop() + targetElem.offset().top});
+            : this.scrollOwner.animate({scrollTop: this.scrollOwner.scrollTop() + targetElem.offset().top});
     }
 }
