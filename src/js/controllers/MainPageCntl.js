@@ -76,6 +76,8 @@ export class MainPageCntl {
         let scrollToElem = $(link.attr('href'));
         console.log(scrollToElem);
         console.log(scrollToElem.offset());
+        scrollToElem.offset().top = 0;
+        console.log(scrollToElem.offset());
         this.paginator.scrollTo(scrollToElem, link);
         this.menu.closeMenu();
     }
