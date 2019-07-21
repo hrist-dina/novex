@@ -8,7 +8,6 @@ export class Menu {
     }
 
     init() {
-        console.log( this.determineActiveLink.bind( this )());
         this.setActiveLink( this.determineActiveLink.bind( this )() );
         this.events();
     }
@@ -49,6 +48,10 @@ export class Menu {
     }
 
     determineActiveLink() {
+        if ($('body').hasClass('desktop')) {
+            const id = $('.js-page').filter('.is-show').attr('id');
+            return this.menu.find(`[href="#${id}"]`);
+        }
         const self = this;
         let links = self.menu.find('.menu__link');
         let scrollOwnerScrolled = self.scrollOwner.scrollTop();

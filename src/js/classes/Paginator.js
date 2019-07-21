@@ -1,4 +1,6 @@
 import $ from "jquery";
+import {ScrollToPage} from "./ScrollToPage";
+import {Menu} from "./Menu";
 
 export class Paginator {
     constructor(options) {
@@ -13,11 +15,29 @@ export class Paginator {
 
     }
 
-    scrollTo(targetElem) {
-        console.log(targetElem);
+    scrollTo(targetElem, link = false) {
 
-        $('body').hasClass('ios')
+        this.scrollToPage = new ScrollToPage(
+            {
+                pages: $('.js-page')
+            }
+        );
+
+        const id = targetElem.attr('id');
+        let activePage = this.scrollToPage.pages.filter(`#${id}`);
+
+        if (activePage.length) {
+            this.scrollToPage.scroll(activePage.index());
+            link ? Menu.prototype.setActiveLink(link) : '';
+            if(id === 'winners') {
+                $('.js-winners').trigger('wheel');
+                console.log('test');
+            }
+
+        }
+
+        /*$('body').hasClass('ios')
             ? $('body').animate({scrollTop: targetElem.offset().top})
-            : this.scrollOwner.animate({scrollTop: this.scrollOwner.scrollTop() + targetElem.offset().top});
+            : this.scrollOwner.animate({scrollTop: this.scrollOwner.scrollTop() + targetElem.offset().top});*/
     }
 }

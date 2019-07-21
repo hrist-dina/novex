@@ -73,7 +73,7 @@ export class MainPageCntl {
     scrollToHref(link) {
         let scrollToElem = $(link.attr('href'));
         console.log(scrollToElem);
-        this.paginator.scrollTo(scrollToElem);
+        this.paginator.scrollTo(scrollToElem, link);
         this.menu.closeMenu();
     }
 
@@ -97,8 +97,14 @@ export class MainPageCntl {
     }
 
     initNavigationWinners() {
-        let winners = $('.js-winners__list').find('.winners__item').length;
-        if (winners >= 3) {
+        let winners = $('.js-winners__list').find('.winners__item');
+        winners.hover(function () {
+            $(this).addClass('active').removeClass('in-active');
+        },
+        function () {
+            $(this).addClass('in-active').removeClass('active');
+        });
+        if (winners.length >= 3) {
             $('.js-winners__navigation').show();
         }
     }

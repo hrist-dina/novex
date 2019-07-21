@@ -1,4 +1,5 @@
 import $ from "jquery";
+import {Menu} from "./Menu";
 
 
 export class ScrollToPage {
@@ -26,18 +27,22 @@ export class ScrollToPage {
             let deltaY = event.originalEvent.deltaY,
                 activePage = self.pages.filter('.is-show'),
                 nextPage = activePage.next(),
-                prevPage = activePage.prev();
-
+                prevPage = activePage.prev(),
+                linkToPage = 'main';
             if (deltaY > 0) {
                 if (nextPage.length) {
                     self.scroll(nextPage.index());
+                    linkToPage = nextPage.attr('id');
                 }
             }
             if (deltaY < 0) {
                 if (prevPage.length) {
                     self.scroll(prevPage.index());
+                    linkToPage = prevPage.attr('id');
                 }
             }
+            let link = $('.js-menu').find('.js-scroll-link').filter(`[href="#${linkToPage}"]`);
+            Menu.prototype.setActiveLink(link);
         });
     }
 
@@ -53,17 +58,21 @@ export class ScrollToPage {
         const self = this;
 
         $('.js-winners').on('wheel', function (event) {
+            console.log(this);
+            console.log(event);
             if ($(this).closest('.js-page').hasClass('is-show')) {
                 event.stopPropagation();
             }
             let position = $(this).offset().top;
             let deltaY = event.originalEvent.deltaY;
 
+            console.log(deltaY);
+            console.log(position);
             if (deltaY < 0 && position === 0) {
                 self.inScroll = true;
 
                 let pageWinners = $(this).closest('.js-page');
-                pageWinners.removeClass('is-show');
+                pageWinners.removeClass('is-show').addClass('is-hide');
                 pageWinners.prev().removeClass('is-hide').addClass('is-show');
                 setTimeout(function () {
                     self.inScroll = false;
@@ -75,7 +84,6 @@ export class ScrollToPage {
     //METHODS
 
     scroll(pageEq) {
-        console.log(pageEq);
         const self = this;
         if (!self.inScroll) {
             self.inScroll = true;

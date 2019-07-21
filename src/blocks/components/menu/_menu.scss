@@ -5,11 +5,10 @@
   right: 50%;
   left: 0;
   z-index: 1000;
-  -moz-transition: right 0.3s ease;
-  -webkit-transition: right 0.3s ease;
-  transition: right 0.3s ease;
-
   background: #14A7DD;
+  -moz-transition: left 0.3s ease;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
 }
 
 .menu.is-hide {
@@ -67,15 +66,18 @@
 
 
 .desktop .menu__item.active .menu__link {
-  font: 700 2.8rem/2.76em;
+  font: 700  40px/50px 'Geometria', Arial, Helvetica, sans-serif;
   color: #fff;
 }
 
+.desktop .menu__item.active {
+  margin-bottom: 38px;
+}
+
 .menu .menu__link {
+  font: 700 28px/35px 'Geometria', Arial, Helvetica, sans-serif;
+  border-bottom: none;
   position: relative;
-  //font-size: 28px;
-  font: 700 1.5rem/2.76em;
-  line-height: 35px;
   color: #CAE3ED;
   border-bottom: none;
   text-decoration: none;

@@ -164,6 +164,9 @@ h2, .title-sm {
 	left: 40%;
 	display: none;
 }
+.container_winners {
+	top: 100%;
+}
 
 .desktop .page__part {
 	-moz-transition: ease-in-out all .8s;
@@ -175,17 +178,30 @@ h2, .title-sm {
 	top: 0;
 }
 
-.desktop .page.is-hide .page__part {
-	top: 0;
-}
 
-.desktop .page.is-hide .page__left,
 .desktop .page.is-show .page__left {
 	left: 0;
 }
-.desktop .page.is-hide .page__right,
+.desktop .page.is-hide .page__left {
+	z-index: 0;
+	left: 0;
+}
+
 .desktop .page.is-show .page__right {
 	right: 0;
+}
+
+.desktop .page.is-hide .page__right {
+	z-index: 0;
+	right: 0;
+}
+
+.desktop .page.is-show .container_winners {
+	top: 0;
+}
+
+.desktop .page.is-hide .container_winners{
+	top: 100%;
 }
 
 .bg-absolute {
