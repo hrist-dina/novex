@@ -466,26 +466,6 @@ hr.hr {
   transition: all 1s;
 }
 
-.desktop .page__left {
-  top: 100%;
-}
-
-.desktop .page__right {
-  top: -100%
-}
-
-.desktop .page__full {
-  top: 100%;
-}
-
-.desktop .page.is-show .page__part {
-  top: 0;
-}
-
-.desktop .page.is-hide .page__part {
-  top: 0;
-}
-
 .page-information {
   position: absolute;
   left: 0;
@@ -962,6 +942,9 @@ hr.hr {
 
 .step-second {
   margin-top: 7vh;
+  @include sm-block {
+    margin-top: 0;
+  }
 }
 
 .step-second__header {
@@ -1052,6 +1035,17 @@ hr.hr {
   }
 }
 
+.step-second__content {
+  @include md-block {
+    height: 100%;
+    width: 100%;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
 .ticket-form {
 
 }
@@ -1075,7 +1069,7 @@ hr.hr {
   top: 14px;
   left: 0;
   color: #5a6555;
-  font: 400 1rem/2rem 'Geometria', Arial, Helvetica, sans-serif;
+  font: 400 1.2rem/2.2rem 'Geometria', Arial, Helvetica, sans-serif;
   padding: 0 25px;
   -moz-transition: top 0.3s ease, font-size 0.3s ease;
   -webkit-transition: top 0.3s ease, font-size 0.3s ease;
@@ -1100,11 +1094,15 @@ hr.hr {
   -moz-transition: border 0.3s ease;
   -webkit-transition: border 0.3s ease;
   transition: border 0.3s ease;
+
+  @include md-block {
+    height: 50px;
+  }
 }
 
 .tablet .ticket-form__elem input {
   font: 500 1.5rem/2.5rem 'Geometria', Arial, Helvetica, sans-serif;
-  height: 100px;
+  height: 80px;
 }
 
 .ticket-form__verification {
@@ -1134,6 +1132,7 @@ hr.hr {
   border: none;
   color: #202020;
   border-bottom: 1px solid transparent;
+  text-decoration: none;
 }
 
 .ticket-form__verification-text a:hover {
@@ -1799,50 +1798,6 @@ a.paginator__link_h-hidden:focus {
 
 .scroll-panel_dark .scroll-panel__line{
   border-left: 2px solid #15240d;
-}
-
-.mouse {
-  position: absolute;
-  top: 86vh;
-  width: 16px;
-  height: 30px;
-  border-radius: 14px;
-  -moz-transform: none; /* Для Firefox */
-  -ms-transform: none; /* Для IE */
-  -webkit-transform: none; /* Для Safari, Chrome, iOS */
-  -o-transform: none; /* Для Opera */
-  transform: none;
-  border: 2px solid white;
-}
-
-.scroll-panel_dark .mouse{
-  border-color: #007AC8;
-}
-
-.mouse__roller {
-  display: block;
-  margin: 5px auto;
-  background: #fff;
-  opacity: .6;
-  position: relative;
-  height: 5px;
-  width: 2px;
-  animation: move 1s infinite;
-}
-
-.scroll-panel_dark .mouse__roller{
-  background: #007AC8;
-}
-
-@keyframes move {
-  from {
-    top: 0;
-    opacity: .6;
-  }
-  to {
-    top: 5px;
-    opacity: .2;
-  }
 }
 
 .left-bottom-soaring-image {

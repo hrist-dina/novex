@@ -4,6 +4,10 @@
     padding: 0 7.2vw 0 7vw;
     height: 24vh;
 
+    @include md-block {
+      height: 12vh;
+    }
+
     &-left {
       float: left;
       position: relative;
@@ -95,6 +99,17 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    @include lg-block {
+      width: 42vw;
+      height: 55vh;
+    }
+
+    @include sm-block {
+      width: 88vw;
+      min-height: 40vh;
+      margin: 0 0 16px 0;
+    }
+
     &-logo {
       background-color: #EE2863;
       background-image: url(../img/icon-prize.png);
@@ -106,6 +121,10 @@
       height: 4.5vw;
       margin-bottom: 1.5vw;
       display: inline-block;
+      @include sm-block {
+        width: 85px;
+        height: 85px;
+      }
     }
   }
 }
@@ -114,6 +133,9 @@
   font: 400 1.7em/1.3 Arial, Helvetica, sans-serif;
   color: #fff;
   margin-bottom: 0.5vw;
+  @include sm-block {
+   font-size: 24px;
+  }
 }
 
 .winners__list-main {
@@ -224,6 +246,14 @@
     z-index: 0;
     border-bottom: 35.94vh  /* 354/9.85 */ solid #009FDA;
     border-right: 18.4375vw  /* 354/19.2 */ solid transparent;
+    @include lg-block {
+      border-right-width: 42vw;
+      border-bottom-width: 55vh;
+    }
+
+    @include sm-block {
+      border-right-width: 88vw;
+    }
   }
 }
 
@@ -233,6 +263,9 @@
   color: rgba(255, 255, 255, 1);
   z-index: 1;
   position: relative;
+  @include lg-block {
+    font-size: 18px;
+  }
 }
 
 .winners__item-date-new {
@@ -241,6 +274,9 @@
   margin-bottom: 2.1vw;
   z-index: 1;
   position: relative;
+  @include sm-block {
+    font-size: 24px;
+  }
 }
 
 .winners__item-amount {
@@ -257,6 +293,16 @@
   -o-transition: all .6s ease-in-out;
   -ms-transition: all .6s ease-in-out;
   transition: all .6s ease-in-out;
+  @include lg-block {
+    width: 16.854vw;
+    height: 16.854vw;
+  }
+  @include sm-block {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 150px;
+    height: 150px;
+  }
 }
 
 
@@ -264,6 +310,12 @@
   font: 500 1.875vw  /* 36/19.2 */ 'Geometria', Arial, Helvetica, sans-serif;
   color: #fff;
   top: 40%;
+  @include lg-block {
+    font-size: 18px;
+  }
+  @include sm-block {
+    font-size: 22px
+  }
 }
 .winners__item-technics {
   position: relative;
@@ -271,6 +323,20 @@
   width: 100%;
   margin-left: 0;
   margin-right: 0;
+  @include lg-block {
+    width: 100%;
+  }
+
+  @include sm-block {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 25px auto 0;
+    width: 200px;
+    height: 200px;
+    right: 0;
+
+  }
 
   & img {
     max-width: 18.4375vw  /* 354/19.2 */;
@@ -278,6 +344,18 @@
     position: absolute;
     left: -1vw;
     top: -1vh;
+
+    @include lg-block {
+      max-width: 42vw;
+    }
+
+    @include sm-block {
+      position: relative;
+      margin: auto;
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
   }
 
 }
@@ -293,6 +371,9 @@
   margin-bottom: 0.5vw;
   z-index: 1;
   position: relative;
+  @include lg-block {
+    font-size: 24px;
+  }
 }
 
 .winners__item-city {
@@ -301,6 +382,9 @@
   margin-top: 1vh;
   z-index: 1;
   position: relative;
+  @include lg-block {
+    font-size: 18px;
+  }
 }
 
 .winners__item-count {
@@ -311,6 +395,9 @@
   font: 900 1.5em/1.38 'Geometria', Arial, Helvetica, sans-serif;
   color: #fff;
   height: 42px;
+  @include lg-block {
+    font-size: 18px;
+  }
 }
 
 .winners__item-text span:first-child {
@@ -396,5 +483,28 @@
     right: 0;
     z-index: 0;
     animation-timing-function: ease;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+
+  & li {
+    background-color: #fff;
+    opacity: 0.3;
+    border-radius: 0;
+    width: 17px;
+    height: 2px;
+    margin: 0 5px;
+  }
+  
+  & li.slick-active {
+    opacity: 1;
+  }
+
+  & button {
+    display: none;
   }
 }

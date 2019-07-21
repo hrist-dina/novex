@@ -30,14 +30,14 @@ export class Paginator {
             this.scrollToPage.scroll(activePage.index());
             link ? Menu.prototype.setActiveLink(link) : '';
             if(id === 'winners') {
-                $('.js-winners').trigger('wheel');
-                console.log('test');
             }
 
         }
 
-        /*$('body').hasClass('ios')
-            ? $('body').animate({scrollTop: targetElem.offset().top})
-            : this.scrollOwner.animate({scrollTop: this.scrollOwner.scrollTop() + targetElem.offset().top});*/
+        if ($('body').hasClass('mobile')) {
+            $('body').hasClass('ios')
+                ? $('body').animate({scrollTop: targetElem.offset().top})
+                : this.scrollOwner.animate({scrollTop: this.scrollOwner.scrollTop() + targetElem.offset().top});
+        }
     }
 }

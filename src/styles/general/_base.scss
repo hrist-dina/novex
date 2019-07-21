@@ -20,12 +20,21 @@ h1, h2, h3, h4, h5, h6, ul {
 h2, .title-sm {
 	font: 500 44px/56px 'Geometria', sans-serif;
 	color: #fff;
+
+	@include md-block {
+		font-size: 36px;
+		line-height: 46px;
+	}
 }
 .content {
 	padding: 5.35vh 2.60vw;
 	max-width: 1560px;
 	margin: 0 auto;
 	box-sizing: border-box;
+
+	@include lg-block {
+		padding: 20px 15px;
+	}
 
 	&__text {
 		font-size: 18px;
@@ -47,6 +56,11 @@ h2, .title-sm {
 		line-height: 56px;
 		color: #fff;
 		text-shadow: 0 6px 8px rgba(0, 0, 0, 0.08);
+
+		@include lg-block {
+			font-size: 36px;
+			line-height: 46px;
+		}
 
 		&:before {
 			content: '';
@@ -84,13 +98,21 @@ h2, .title-sm {
 
 .logo {
 	display: block;
-	background-image: url("../img/screen-1/logo.svg");
+	background-image: url("../img/page0/logo.svg");
 	width: 462px;
 	height: 51px;
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
 	text-indent: -6000px;
+
+	@include lg-block {
+		margin-top: 40px;
+	}
+
+	@include sm-block {
+		width: 100%;
+	}
 }
 
 .container_winners {
@@ -102,6 +124,36 @@ h2, .title-sm {
 	padding: 5vh 0;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+.page {
+	&__part {
+		width: 50%;
+		height: 100%;
+		position: absolute;
+	}
+
+	&__left {
+		right: 50%;
+		left: 0;
+	}
+
+	&__full {
+		width: 100%;
+	}
+}
+
+.table, .mobile {
+	.page {
+		&__part {
+			width: 100vw;
+			position: relative;
+		}
+	}
+
+	.container {
+		position: relative;
+	}
 }
 
 .container_left {
@@ -202,6 +254,7 @@ h2, .title-sm {
 
 .desktop .page.is-hide .container_winners{
 	top: 100%;
+	z-index: 0;
 }
 
 .bg-absolute {
@@ -229,4 +282,18 @@ h2, .title-sm {
 .bg-chess {
 	background: #007AC9 url(../img/page4/pattern-chess.svg) repeat;
 	background-size: 400px 400px;
+}
+
+@include lg-block {
+	.container.page__left {
+		top: auto;
+		left: 0;
+		right: auto;
+	}
+
+	.container.page__right {
+		top: auto;
+		right: 0;
+		left: auto;
+	}
 }

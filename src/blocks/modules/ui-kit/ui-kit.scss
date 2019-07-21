@@ -19,6 +19,12 @@ button,
     line-height: 26px;
     text-align: center;
     text-decoration: none;
+
+    @include md-block {
+        padding: 12px 20px;
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 
 .button-red {

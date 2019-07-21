@@ -6,10 +6,16 @@
 
   & .content__top {
     padding-top: 13vh;
+
+    @include lg-block {
+      padding-top: 20px;
+    }
   }
 
   &__pattern {
     position: absolute;
+    background: url("../img/page1/pattern.svg") repeat;
+    background-size: contain;
     width: 100%;
     top: 0;
     height: auto;
@@ -35,19 +41,48 @@
   &__technic {
     position: relative;
     width: #{calc(100% / 4)};
+    @include lg-block {
+      padding-bottom: 140px;
+      min-width: 50%;
+      background-position: top center !important;
 
+      &-stiker {
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto;
+      }
+    }
+
+    @include md-block {
+      min-width: auto;
+    }
     
     &-list {
       display: flex;
       align-items: flex-end;
+      @include lg-block {
+        flex-wrap: wrap;
+
+      }
+
+      @include md-block {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     &-stiker {
       position: absolute;
       width: 158px;
       height: 159px;
-
       z-index: 0;
+
+      @include lg-block {
+        bottom: 0;
+      }
+
+
 
       &-text {
         height: 100%;
@@ -92,12 +127,22 @@
     &.fridge &-stiker {
       bottom: -120px;
       left: 30px;
+
+      @include lg-block {
+        bottom: 0;
+      }
+
     }
 
     &.washer {
       background: url("../img/page1/washer.png") no-repeat;
       width: 242px;
       height: 280px;
+
+      @include lg-block {
+       margin-top: 160px;
+        padding-bottom: 0;
+      }
     }
 
     &.washer &-stiker {
@@ -128,25 +173,41 @@
     }
 
     &.dishwasher {
-      background: url("../img/page1/dishwasher.png") no-repeat center;
+      background: url("../img/page1/dishwasher.png") no-repeat top center;
       width: 256px;
       height: 309px;
+      @include lg-block {
+        padding-bottom: 140px;
+      }
     }
 
     &.dishwasher &-stiker {
       bottom: -110px;
       left: 50px;
+
+      @include lg-block {
+        bottom: 10px;
+      }
     }
 
     &.hoover {
       background: url("../img/page1/hoover.png") no-repeat center;
       width: 151px;
       height: 131px;
+
+      @include lg-block {
+        margin-top: 170px;
+        padding-bottom: 0;
+      }
     }
 
     &.hoover &-stiker {
       top: -155px;
       left: -10px;
+
+      @include lg-block {
+        top: -160px;
+      }
 
       &-text {
         box-shadow: none;
@@ -186,6 +247,11 @@
     max-height: 550px;
     width: 28.64vw;
     height: 55.9vh;
+
+    @include lg-block {
+      margin: auto;
+      width: 100vw;
+    }
   }
 
   &__stiker {
@@ -200,15 +266,26 @@
     justify-content: center;
     border-radius: 50%;
 
+    @include lg-block {
+      right: 0;
+    }
 
     &-text {
       color: #fff;
       font-size: 4.47vh; //44px;
       line-height: 55px;
+
+      @include lg-block {
+        font-size: 3.47vh;
+      }
     }
   }
 
   & .button {
     position: absolute;
+    
+    @include lg-block {
+      position: relative;
+    }
   }
 }

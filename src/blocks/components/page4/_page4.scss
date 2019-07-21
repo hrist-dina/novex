@@ -2,12 +2,28 @@
   & .button {
     display: inline-block;
     margin-right: 12px;
+
+     @include sm-block {
+       margin-bottom: 12px;
+     }
   }
 
   & .bg-absolute {
     & img {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  & .block-vertical-center {
+    @include lg-block {
+      transform: none;
+    }
+  }
+
+  & .bg-chess {
+    @include md-block {
+      background-size: contain;
     }
   }
 }

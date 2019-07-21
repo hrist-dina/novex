@@ -58,16 +58,12 @@ export class ScrollToPage {
         const self = this;
 
         $('.js-winners').on('wheel', function (event) {
-            console.log(this);
-            console.log(event);
             if ($(this).closest('.js-page').hasClass('is-show')) {
                 event.stopPropagation();
             }
             let position = $(this).offset().top;
             let deltaY = event.originalEvent.deltaY;
 
-            console.log(deltaY);
-            console.log(position);
             if (deltaY < 0 && position === 0) {
                 self.inScroll = true;
 

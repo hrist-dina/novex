@@ -1,4 +1,5 @@
 import $ from "jquery";
+import slick from 'slick-carousel';
 import {Menu} from "../classes/Menu";
 import {ScrollToPage} from "../classes/ScrollToPage";
 import {Paginator} from "../classes/Paginator";
@@ -18,6 +19,7 @@ export class MainPageCntl {
         this.initPaginator();
         this.initTicketForm();
         this.initNavigationWinners();
+        this.initSlider();
 
         this.events();
     }
@@ -77,22 +79,50 @@ export class MainPageCntl {
         this.menu.closeMenu();
     }
 
-    initSwiper() {
-        this.swiper = new Swiper('.js-swiper-container', {
-            direction: 'horizontal',
-            navigation: {
-                nextEl: '.js-winners__nav-right',
-                prevEl: '.js-winners__nav-left'
-            },
-            pagination: {
-                el: '.js-swiper-pagination',
-                type: 'bullets'
-            },
-            slidesPerView: 1,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false
-            }
+    initSlider() {
+        $('.js-slider-container').slick({
+            mobileFirst: true,
+            arrows: false,
+            slidesPerRow: 1,
+            rows: 2,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 769,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        vertical: true,
+                        slidesToShow: 4,
+                        slidesToScroll: 4,
+                        rows: 0,
+                        infinite: false,
+                        arrow: false,
+                        dots: true
+                    }
+                },
+                // {
+                //     breakpoint: 600,
+                //     settings: {
+                //         slidesToShow: 2,
+                //         slidesToScroll: 2
+                //     }
+                // },
+                // {
+                //     breakpoint: 480,
+                //     settings: {
+                //         slidesToShow: 1,
+                //         slidesToScroll: 1
+                //     }
+                // }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
         });
     }
 

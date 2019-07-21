@@ -37,6 +37,8 @@
 
   &__pattern-circle {
     position: absolute;
+    background: url("../img/page2/circle-pattern.svg") repeat;
+    background-size: contain;
     width: 100%;
     height: 50%;
     z-index: -1;
@@ -47,7 +49,13 @@
   }
 
   &__parner {
+    @include sm-block {
+      width: 50%;
 
+      & img {
+        width: 100%;
+      }
+    }
     &-list {
       display: flex;
       flex-wrap: wrap;
@@ -70,6 +78,9 @@
     color: #fff;
     box-sizing: border-box;
     z-index: 0;
+    @include md-block {
+      padding-bottom: 25px;
+    }
 
     &:after {
       content: '';
@@ -82,6 +93,9 @@
       border-right: 690px solid transparent;
       max-width: 690px;
       z-index: -1;
+      @include md-block {
+        content: none;
+      }
     }
 
     & a {
@@ -104,10 +118,19 @@
     text-decoration: none;
     color: transparent;
 
+    @include sm-block {
+      width: 100%;
+
+      & img {
+        width: 100%;
+      }
+    }
+
     &-wrap {
       margin-top: -3.05vh;  /* -30/9.85 */
       padding-left: 7.292vw  /* 140/19.2 */;
       padding-right: 8.333vw  /* 160/19.2 */;
+
     }
 
     &-list {
