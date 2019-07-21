@@ -67,17 +67,12 @@ export class MainPageCntl {
         var self = this;
         $('.js-scroll-link').on('click', function( event ) {
             event.preventDefault();
-            console.log($(this));
             self.scrollToHref( $(this) );
         });
     }
 
     scrollToHref(link) {
         let scrollToElem = $(link.attr('href'));
-        console.log(scrollToElem);
-        console.log(scrollToElem.offset());
-        scrollToElem.offset().top = 0;
-        console.log(scrollToElem.offset());
         this.paginator.scrollTo(scrollToElem, link);
         this.menu.closeMenu();
     }
@@ -108,35 +103,13 @@ export class MainPageCntl {
                         dots: true
                     }
                 },
-                // {
-                //     breakpoint: 600,
-                //     settings: {
-                //         slidesToShow: 2,
-                //         slidesToScroll: 2
-                //     }
-                // },
-                // {
-                //     breakpoint: 480,
-                //     settings: {
-                //         slidesToShow: 1,
-                //         slidesToScroll: 1
-                //     }
-                // }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
             ]
         });
     }
 
     initNavigationWinners() {
         let winners = $('.js-winners__list').find('.winners__item');
-        console.log(winners);
-        winners.on('click', function () {
-            console.log(this);
-        });
         winners.hover(function () {
-            console.log(this);
             $(this).addClass('active').removeClass('in-active');
         },
         function () {

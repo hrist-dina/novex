@@ -94,7 +94,7 @@
     display: inline-block;
     vertical-align: top;
     width: 18.4375vw  /* 354/19.2 */;
-    height: 35.94vh  /* 354/9.85 */;
+    height: 355px  /* 354/9.85 */;
     margin: 0 1vw 2vw;
     background-repeat: no-repeat;
     background-size: cover;
@@ -244,7 +244,7 @@
     width: 0;
     height: 0;
     z-index: 0;
-    border-bottom: 35.94vh  /* 354/9.85 */ solid #009FDA;
+    border-bottom: 354px  /* 354/9.85 */ solid #009FDA;
     border-right: 18.4375vw  /* 354/19.2 */ solid transparent;
     @include lg-block {
       border-right-width: 42vw;
@@ -344,6 +344,8 @@
     position: absolute;
     left: -1vw;
     top: -1vh;
+    right: 0;
+    margin: auto;
 
     @include lg-block {
       max-width: 42vw;
@@ -351,10 +353,6 @@
 
     @include sm-block {
       position: relative;
-      margin: auto;
-      left: 0;
-      right: 0;
-      width: 100%;
     }
   }
 

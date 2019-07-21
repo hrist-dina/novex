@@ -18,7 +18,7 @@
     background-size: contain;
     width: 100%;
     top: 0;
-    height: auto;
+    height: 100%;
     z-index: -1;
   }
 
@@ -120,13 +120,19 @@
 
     &.fridge {
       background: url("../img/page1/fridge.png") no-repeat;
-      width: 182px;
-      height: 483px;
+      background-size: contain;
+      width: 9.479vw  /* 182/19.2 */;
+      height: 25.15625vw  /* 483/19.2 */;
+
+      @include md-block {
+        width: 182px;
+        height: 483px;
+      }
     }
 
     &.fridge &-stiker {
       bottom: -120px;
-      left: 30px;
+      left: 1.5625vw  /* 30/19.2 */;
 
       @include lg-block {
         bottom: 0;
@@ -136,18 +142,24 @@
 
     &.washer {
       background: url("../img/page1/washer.png") no-repeat;
-      width: 242px;
-      height: 280px;
+      background-size: contain;
+      width: 12.604vw  /* 242/19.2 */;
+      height: 28.43vh  /* 280/9.85 */;
 
       @include lg-block {
-       margin-top: 160px;
+        margin-top: 160px;
         padding-bottom: 0;
       }
+      @include md-block {
+        width: 242px;
+        height: 280px;
+      }
+
     }
 
     &.washer &-stiker {
       top: -135px;
-      left: 30px;
+      left: 1.5625vw  /* 30/19.2 */;
 
       &-text {
         box-shadow: none;
@@ -174,16 +186,22 @@
 
     &.dishwasher {
       background: url("../img/page1/dishwasher.png") no-repeat top center;
-      width: 256px;
-      height: 309px;
+      background-size: contain;
+      width: 13.333vw  /* 256/19.2 */;
+      height: 31.37vh  /* 309/9.85 */;
       @include lg-block {
         padding-bottom: 140px;
+      }
+
+      @include md-block {
+        width: 256px;
+        height: 309px;
       }
     }
 
     &.dishwasher &-stiker {
       bottom: -110px;
-      left: 50px;
+      left: 2.604vw  /* 50/19.2 */;
 
       @include lg-block {
         bottom: 10px;
@@ -192,18 +210,24 @@
 
     &.hoover {
       background: url("../img/page1/hoover.png") no-repeat center;
-      width: 151px;
-      height: 131px;
+      background-size: contain;
+      width: 7.865vw  /* 151/19.2 */;
+      height: 13.3vh  /* 131/9.85 */;
 
       @include lg-block {
         margin-top: 170px;
         padding-bottom: 0;
       }
+
+      @include md-block {
+        width: 151px;
+        height: 131px;
+      }
     }
 
     &.hoover &-stiker {
       top: -155px;
-      left: -10px;
+      left: -0.521vw  /* -10/19.2 */;
 
       @include lg-block {
         top: -160px;

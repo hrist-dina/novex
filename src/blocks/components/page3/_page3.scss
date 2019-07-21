@@ -4,6 +4,12 @@
     padding-top: 13vh;
   }
 
+  & .step-second {
+    @include to(1380px) {
+      margin-top: 5px;
+    }
+  }
+
   & .content__title {
     box-shadow: none;
     &:before {
@@ -43,6 +49,22 @@
       background-color: #007AC9;
       z-index: -1;
     }
+  }
+
+  & .check-pic {
+    @include to(1380px) {
+      max-width: 27.917vw  /* 536/19.2 */;
+      margin: auto;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    @include lg-block() {
+      max-width: 536px;
+    }
+
   }
 
 }

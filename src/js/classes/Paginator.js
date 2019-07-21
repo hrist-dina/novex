@@ -28,19 +28,11 @@ export class Paginator {
 
         if (activePage.length) {
             this.scrollToPage.scroll(activePage.index());
-            console.log(link);
             link ? Menu.prototype.setActiveLink(link) : '';
-            if(id === 'winners') {
-                console.log('winners');
-            }
-
         }
 
-        if ($('body').hasClass('mobile')) {
-            console.log('mobile');
-            $('body').hasClass('ios')
-                ? $('body').animate({scrollTop: targetElem.offset().top})
-                : this.scrollOwner.animate({scrollTop: this.scrollOwner.scrollTop() + targetElem.offset().top});
-        }
+        $('body').hasClass('ios')
+            ? $('body').animate({scrollTop: targetElem.offset().top})
+            : this.scrollOwner.animate({scrollTop: this.scrollOwner.scrollTop() + targetElem.offset().top});
     }
 }

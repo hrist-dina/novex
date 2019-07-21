@@ -285,7 +285,7 @@ h2, .title-sm {
 	background-size: 400px 400px;
 }
 
-@include lg-block {
+@include xl-block {
 	.container.page__left {
 		top: auto;
 		left: 0;

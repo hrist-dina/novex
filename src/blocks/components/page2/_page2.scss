@@ -46,10 +46,25 @@
   
   &__white-bg {
     background-color: #fff;
+
+    @include to(1380px) {
+      padding: 2.35vh 1.8vw;
+    }
   }
 
   &__parner {
+
+    @include to(1380px) {
+      height: #{calc(100% / 4)};
+
+      & img {
+        width: 100%;
+      }
+    }
+
+
     @include sm-block {
+      height: auto;
       width: 50%;
 
       & img {
@@ -118,6 +133,12 @@
     text-decoration: none;
     color: transparent;
 
+    @include to(1380px) {
+      & img {
+        width: 100%;
+      }
+    }
+
     @include sm-block {
       width: 100%;
 
@@ -130,6 +151,12 @@
       margin-top: -3.05vh;  /* -30/9.85 */
       padding-left: 7.292vw  /* 140/19.2 */;
       padding-right: 8.333vw  /* 160/19.2 */;
+      box-sizing: border-box;
+
+      @include to(1380px) {
+        padding-left: 2.292vw;
+        padding-right: 3.333vw;
+      }
 
     }
 

@@ -2,10 +2,7 @@
   & .button {
     display: inline-block;
     margin-right: 12px;
-
-     @include sm-block {
-       margin-bottom: 12px;
-     }
+    margin-bottom: 12px;
   }
 
   & .bg-absolute {
