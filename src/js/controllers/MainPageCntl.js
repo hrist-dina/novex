@@ -18,8 +18,8 @@ export class MainPageCntl {
         this.initScrollToPage();
         this.initPaginator();
         this.initTicketForm();
-        this.initNavigationWinners();
         this.initSlider();
+        this.initNavigationWinners();
 
         this.events();
     }
@@ -75,6 +75,7 @@ export class MainPageCntl {
     scrollToHref(link) {
         let scrollToElem = $(link.attr('href'));
         console.log(scrollToElem);
+        console.log(scrollToElem.offset());
         this.paginator.scrollTo(scrollToElem, link);
         this.menu.closeMenu();
     }
@@ -128,15 +129,20 @@ export class MainPageCntl {
 
     initNavigationWinners() {
         let winners = $('.js-winners__list').find('.winners__item');
+        console.log(winners);
+        winners.on('click', function () {
+            console.log(this);
+        });
         winners.hover(function () {
+            console.log(this);
             $(this).addClass('active').removeClass('in-active');
         },
         function () {
             $(this).addClass('in-active').removeClass('active');
         });
-        if (winners.length >= 3) {
+        /*if (winners.length >= 3) {
             $('.js-winners__navigation').show();
-        }
+        }*/
     }
 
 }
