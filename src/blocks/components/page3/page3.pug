@@ -31,7 +31,7 @@ section#register.page.page-3.js-page
                 .ticket-form__elem
                     label(for='phone')
                         span.ticket-form__elem-title Телефон
-                        input#phone.js-anti-scroll(maxlength='18', type='text', name='phone', autocomplete='off' data-validator-require="true")
+                        input#phone.js-anti-scroll.js-phone-mask(maxlength='18', type='text', name='phone', autocomplete='off' data-validator-require="true")
                 .ticket-form__elem
                     label(for='code')
                         span.ticket-form__elem-title Уникальный код с чека
@@ -39,7 +39,7 @@ section#register.page.page-3.js-page
                 .ticket-form__elem
                     label(for='card')
                         span.ticket-form__elem-title Номер бонусной карты
-                        input#card.js-anti-scroll(type='text', name='card', autocomplete='off' data-validator-require="true")
+                        input#card.js-anti-scroll.js-card-mask(type='text', name='card', autocomplete='off' data-validator-require="true")
                 .ticket-form__elem
                     label(for='email')
                         span.ticket-form__elem-title Электронная почта
