@@ -736,17 +736,6 @@ hr.hr {
   background-position: center;
 }
 
-.visual-effects-slide_main-page:before {
-  background: #003456;
-  content: '';
-  opacity: 0.4;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-
 .visual-effects-slide_salute {
   background: no-repeat 50%;
   background-size: cover;
@@ -1072,7 +1061,10 @@ hr.hr {
   top: 14px;
   left: 0;
   color: #5a6555;
-  font: 400 1.2rem/2.2rem 'Geometria', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  font-family: 'Geometria', Arial, Helvetica, sans-serif;
   padding: 0 25px;
   -moz-transition: top 0.3s ease, font-size 0.3s ease;
   -webkit-transition: top 0.3s ease, font-size 0.3s ease;
@@ -1080,7 +1072,10 @@ hr.hr {
 }
 
 .tablet .ticket-form__elem-title {
-  font: 400 1.5rem/2.5rem 'Geometria', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-family: 'Geometria', Arial, Helvetica, sans-serif;
   top: 20px;
 }
 
@@ -1088,7 +1083,10 @@ hr.hr {
   outline: none;
   border: none;
   background-color: #fff;
-  font: 500 1rem/3.3rem 'Geometria', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 3.3rem;
+  font-family: 'Geometria', Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   height: 60px;
   padding: 15px 25px 0;
@@ -1104,18 +1102,27 @@ hr.hr {
 }
 
 .tablet .ticket-form__elem input {
-  font: 500 1.5rem/2.5rem 'Geometria', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-family: 'Geometria', Arial, Helvetica, sans-serif;
   height: 80px;
 }
 
 .ticket-form__verification {
   margin-bottom: 3vh;
   color: #333333;
-  font: 400 16px/24px 'Geometria', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Geometria', Arial, Helvetica, sans-serif;
 }
 
 .tablet .ticket-form__verification {
-  font: 400 1.3rem/1.4em 'Geometria', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.4em;
+  font-family: 'Geometria', Arial, Helvetica, sans-serif;
 }
 
 .ticket-form__verification-check {

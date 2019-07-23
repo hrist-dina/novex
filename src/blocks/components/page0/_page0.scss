@@ -20,18 +20,24 @@
     }
 
     &:before {
-      border-bottom: 100vh solid #009FDA;
-      border-right: 50vw solid transparent;
+      border-bottom: solid #009FDA;
+      border-bottom-width: 100vh;
+      border-right: solid transparent;
+      border-right-width: 50vw;
       @include lg-block {
-        border-right: 100vw solid transparent;
+        border-right: solid transparent;
+        border-right-width: 100vw;
       }
     }
 
     &:after {
-      border-top: 100vh solid #007AC9;
-      border-left: 50vw solid transparent;
+      border-top: solid #007AC9;
+      border-top-width: 100vh;
+      border-left: solid transparent;
+      border-left-width: 50vw;
       @include lg-block {
-        border-left: 100vw solid transparent;
+        border-left: solid transparent;
+        border-left-width: 100vw;
       }
     }
 
@@ -43,10 +49,6 @@
     background-size: cover;
     z-index: 0;
     height: 100vh;
-
-    @include md-block {
-      height: 100%;
-    }
 
     &:before {
       content: '';
