@@ -17,33 +17,6 @@ h1, h2, h3, h4, h5, h6, ul {
 }
 
 
-
-@include md-block {
-	.container_page-0 {
-		top: 0;
-		z-index: 1000;
-	}
-	.container {
-		width: 100%;
-		z-index: 0
-	}
-
-}
-
-@include xl-block {
-	.container.page__left {
-		top: auto;
-		left: auto;
-		right: auto;
-	}
-
-	.container.page__right {
-		top: auto;
-		right: auto;
-		left: auto;
-	}
-}
-
 h2, .title-sm {
 	font: 500 44px/56px 'Geometria', sans-serif;
 	color: #fff;
@@ -133,6 +106,7 @@ h2, .title-sm {
 .container_winners {
 	min-height: 100%;
 	height: auto !important;
+	//position: fixed !important;
 }
 
 .container_brands-table {
@@ -301,6 +275,34 @@ h2, .title-sm {
 .bg-chess {
 	background: #007AC9 url(../img/page4/pattern-chess.svg) repeat;
 	background-size: 400px 400px;
+}
+
+
+@include md-block {
+	.container {
+		width: 100%;
+		z-index: 0
+	}
+
+	.container_page-0 {
+		top: 0;
+		z-index: 800;
+	}
+
+}
+
+@include xl-block {
+	.container.page__left {
+		top: auto;
+		left: auto;
+		right: auto;
+	}
+
+	.container.page__right {
+		top: auto;
+		right: auto;
+		left: auto;
+	}
 }
 
 

@@ -67,6 +67,10 @@
     @include lg-block {
       margin-top: 10px;
     }
+
+    @include md-block {
+      animation: none;
+    }
   }
 
   &__date {

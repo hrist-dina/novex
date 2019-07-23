@@ -57,9 +57,11 @@ export class ScrollToPage {
     bindPositionTracking() {
         const self = this;
 
-        $('.js-winners').on('wheel', function (event) {
+        $('.js-winners2').on('wheel', function (event) {
             if ($(this).closest('.js-page').hasClass('is-show')) {
-                event.stopPropagation();
+                setTimeout(function () {
+                    event.stopPropagation();
+                },2000);
             }
 
             if ($(this).height() > $(window).height()) {
