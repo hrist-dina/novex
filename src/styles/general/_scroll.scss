@@ -398,7 +398,7 @@ hr.hr {
 /*pages begins*/
 .main-wrapper {
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   position: absolute;
   left: 0;
   right: 0;
@@ -410,6 +410,10 @@ hr.hr {
 
 .tablet.ios .main-wrapper {
   overflow: visible;
+}
+
+.mobile .main-wrapper {
+  overflow-y: scroll;
 }
 
 .container {
@@ -715,7 +719,7 @@ hr.hr {
 }
 
 .visual-effects-slide_page-step-one-right {
-  background: #007AC8 url(../img/bg-round.png) 0 0 repeat;
+  background: #007AC8 0 0 repeat;
   background-size: 25%;
 }
 
@@ -724,12 +728,11 @@ hr.hr {
 }
 
 .visual-effects-slide_form-page {
-  background: #D5F0F9 url(../img/bg-triangle-l.png) 0 50% repeat;
+  background: #D5F0F9 0 50% repeat;
   background-size: 25%;
 }
 
 .visual-effects-slide_main-page {
-  background-image: url(../img/main-bg.png);
   background-position: center;
 }
 
@@ -745,7 +748,7 @@ hr.hr {
 }
 
 .visual-effects-slide_salute {
-  background: url(../img/video-like-bg.png) no-repeat 50%;
+  background: no-repeat 50%;
   background-size: cover;
 }
 

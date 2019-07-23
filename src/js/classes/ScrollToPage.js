@@ -62,6 +62,10 @@ export class ScrollToPage {
                 event.stopPropagation();
             }
 
+            if ($(this).height() > $(window).height()) {
+                $('.main-wrapper').css('overflow-y', 'scroll');
+            }
+
             let position = $(this).offset().top;
             let deltaY = event.originalEvent.deltaY;
 

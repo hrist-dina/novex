@@ -14,7 +14,7 @@
 
   &__pattern {
     position: absolute;
-    background: url("../img/page1/pattern.svg") repeat;
+    //background: url("../img/page1/pattern.svg") repeat;
     background-size: contain;
     width: 100%;
     top: 0;
@@ -104,7 +104,7 @@
       }
 
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         right: 83%;
         top: 10px;
@@ -113,6 +113,10 @@
         border-top: 13px solid transparent;
         border-right: 32px solid #ffef63;
         border-bottom: 13px solid transparent;
+        -webkit-transform: rotate3d(1, 1, 1, 45deg);
+        -moz-transform: rotate3d(1, 1, 1, 45deg);
+        -ms-transform: rotate3d(1, 1, 1, 45deg);
+        -o-transform: rotate3d(1, 1, 1, 45deg);
         transform: rotate3d(1, 1, 1, 45deg);
         z-index: 0;
       }
@@ -254,6 +258,15 @@
         box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07);
         z-index: 0;
       }
+    }
+  }
+
+  @include sm-block {
+
+  }
+  .ios .page-1 &__technic-stiker {
+    &:before {
+      content: none;
     }
   }
 

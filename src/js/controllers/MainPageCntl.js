@@ -66,14 +66,15 @@ export class MainPageCntl {
     }
 
     bindScrollLinks() {
-        var self = this;
-        $('.js-scroll-link').on('click', function( event ) {
+        let self = this;
+        $(document).on('touchstart click', '.js-scroll-link', function( event ) {
             event.preventDefault();
             self.scrollToHref( $(this) );
         });
     }
 
     scrollToHref(link) {
+
         let scrollToElem = $(link.attr('href'));
         this.paginator.scrollTo(scrollToElem, link);
         this.menu.closeMenu();

@@ -28,11 +28,13 @@ export class Paginator {
 
         if (activePage.length) {
             this.scrollToPage.scroll(activePage.index());
-            link ? Menu.prototype.setActiveLink(link) : '';
+            if (link) {
+                Menu.prototype.setActiveLink(link);
+            }
         }
 
-        $('body').hasClass('ios')
-            ? $('body').animate({scrollTop: targetElem.offset().top})
-            : this.scrollOwner.animate({scrollTop: this.scrollOwner.scrollTop() + targetElem.offset().top});
+        // $('body').hasClass('ios')
+        //     ? $('body').animate({scrollTop: targetElem.offset().top})
+        this.scrollOwner.animate({scrollTop: this.scrollOwner.scrollTop() + targetElem.offset().top});
     }
 }

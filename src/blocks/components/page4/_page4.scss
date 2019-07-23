@@ -5,6 +5,11 @@
     margin-bottom: 12px;
   }
 
+  &__pic {
+    background-size: cover;
+    background-position: center;
+  }
+
   & .bg-absolute {
     & img {
       width: 100%;

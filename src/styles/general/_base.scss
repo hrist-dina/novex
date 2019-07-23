@@ -17,6 +17,33 @@ h1, h2, h3, h4, h5, h6, ul {
 }
 
 
+
+@include md-block {
+	.container_page-0 {
+		top: 0;
+		z-index: 1000;
+	}
+	.container {
+		width: 100%;
+		z-index: 0
+	}
+
+}
+
+@include xl-block {
+	.container.page__left {
+		top: auto;
+		left: auto;
+		right: auto;
+	}
+
+	.container.page__right {
+		top: auto;
+		right: auto;
+		left: auto;
+	}
+}
+
 h2, .title-sm {
 	font: 500 44px/56px 'Geometria', sans-serif;
 	color: #fff;
@@ -82,18 +109,6 @@ h2, .title-sm {
 
 .o-hidden {
 	overflow: hidden !important;
-}
-
-.main-wrapper {
-	overflow-x: hidden;
-	overflow-y: scroll;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	margin-right: -17px;
-	-webkit-overflow-scrolling: touch;
 }
 
 .logo {
@@ -219,6 +234,8 @@ h2, .title-sm {
 }
 .container_winners {
 	top: 100%;
+	min-height: 100%;
+	height: auto !important;
 }
 
 .desktop .page__part {
@@ -258,6 +275,7 @@ h2, .title-sm {
 	z-index: 0;
 }
 
+
 .bg-absolute {
 	position: absolute;
 	top: 0;
@@ -285,16 +303,13 @@ h2, .title-sm {
 	background-size: 400px 400px;
 }
 
-@include xl-block {
-	.container.page__left {
-		top: auto;
-		left: 0;
-		right: auto;
-	}
 
-	.container.page__right {
-		top: auto;
-		right: 0;
-		left: auto;
-	}
+
+.swiper-container {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	z-index: 1;
 }
