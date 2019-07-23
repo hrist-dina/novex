@@ -327,11 +327,11 @@
   top: 40%;
   @include lg-block {
     font-size: 18px;
-    line-height: 18px;
+    line-height: 22px;
   }
   @include sm-block {
     font-size: 22px;
-    line-height: 22px;
+    line-height: 28px
 
   }
 }

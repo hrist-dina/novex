@@ -67,7 +67,13 @@ export class MainPageCntl {
 
     bindScrollLinks() {
         let self = this;
-        $(document).on('touchstart click', '.js-scroll-link', function( event ) {
+        if($('body').hasClass('ios')) {
+            $(document).on('touchstart', '.menu .js-scroll-link', function( event ) {
+                event.preventDefault();
+                self.scrollToHref( $(this) );
+            });
+        }
+        $(document).on('click', '.js-scroll-link', function( event ) {
             event.preventDefault();
             self.scrollToHref( $(this) );
         });
