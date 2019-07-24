@@ -53,9 +53,9 @@
   }
 
   &__parner {
-
+    height: #{calc(100% / 4)};
     @include to(1380px) {
-      height: #{calc(100% / 4)};
+
 
       & img {
         width: 100%;
@@ -130,21 +130,24 @@
 
   &__product {
     width: 50%;
+    height: 20vh;
     text-decoration: none;
     color: transparent;
 
-    @include to(1380px) {
-      & img {
-        width: 100%;
-      }
+    & img {
+      height: 100%;
     }
+
+     @include lg-block {
+       height: auto;
+
+       & img {
+         width: 100%;
+       }
+     }
 
     @include sm-block {
       width: 100%;
-
-      & img {
-        width: 100%;
-      }
     }
 
     &-wrap {
